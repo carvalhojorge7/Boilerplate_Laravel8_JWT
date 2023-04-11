@@ -16,9 +16,10 @@ Se você clonou este repositório e deseja remover o vínculo do Git, siga os se
 
 ## Configurando o Projeto
 
-Para iniciar um novo projeto com este boilerplate, você pode criar um novo repositório Git e adicionar este projeto como um submódulo ou clonar este repositório e remover o vínculo do Git, como descrito acima.
+Depois de remover o vinculo com o Git como descrito acima, você poderá vincular um novo git normalmente para iniciar o seu projeto.
+Configure o arquivo .ENV na pasta raiz do projeto para adicionar o seu banco de dados.
 
-Depois de inicializar um novo Git, você pode executar os seguintes comandos:
+Depois de inicializar um novo Git e configurar o .ENV, você pode executar os seguintes comandos:
 
 `composer update`
 
