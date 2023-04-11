@@ -14,7 +14,7 @@ Se você clonou este repositório e deseja remover o vínculo do Git, siga os se
 
 3. Verifique se o diretório .git foi removido executando o comando `ls -a` (no Linux ou macOS) ou `dir /ah` (no Windows). O diretório .git não deve mais estar presente.
 
-## Inicializando um novo Git
+## Configurando o Projeto
 
 Para iniciar um novo projeto com este boilerplate, você pode criar um novo repositório Git e adicionar este projeto como um submódulo ou clonar este repositório e remover o vínculo do Git, como descrito acima.
 
