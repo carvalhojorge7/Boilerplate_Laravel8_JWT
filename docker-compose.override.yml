@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+   #PostgreSQL
+   db:
+      image: postgres
+      restart: unless-stopped
+      volumes:
+         - db-volume:/var/lib/postgresql/data
+      ports:
+         - "${DB_PORT}:5432"
+      environment:
+         POSTGRES_USER: ${DB_USERNAME}
+         POSTGRES_PASSWORD: ${DB_PASSWORD}
+         POSTGRES_DB: ${DB_DATABASE}
+      networks:
+         - app-network
+   # PHP 7.4 FPM
+   app:
+      volumes:
+         - ./:/var/www/app
+         - /var/www/app/vendor/
+   # NGINX
+   nginx:
+      volumes:
+         - ./:/var/www/app
+         - ./docker/nginx:/etc/nginx/conf.d/
+volumes:
+   db-volume:
+      name: "${APP_NAME}-db-volume"

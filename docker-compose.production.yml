@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+   # PHP 7.4 FPM
+   app:
+      build:
+         target: backend-production
+      env_file: .env.production
+      volumes:
+         - laravel-storage-volume:/var/www/app/storage:rw
+      # entrypoint: sh -c "php artisan migrate --force"
+   nginx:
+      volumes:
+         - laravel-storage-volume:/var/www/app/storage:ro
+volumes:
+   laravel-storage-volume:
+      name: "${APP_NAME}-laravel-storage-volume"

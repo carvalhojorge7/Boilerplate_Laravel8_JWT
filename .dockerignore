@@ -1,0 +1,10 @@
+
+.git
+*.env
+node_modules
+.gitignore
+.dockerignore
+vendor
+README.md
+Dockerfile
+bootstrap/cache/*.php
